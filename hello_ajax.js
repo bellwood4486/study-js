@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.getElementById('result')
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
+      if (xhr.readyState === xhr.DONE) {
         if (xhr.status === 200) {
           result.textContent = xhr.responseText
         } else {
